@@ -1,0 +1,138 @@
+html {
+    background-color: #FF3CAC;
+    background: url("./images/background.png") center center no-repeat fixed;
+    background-size: cover;
+    font-family: "Helvetica";
+    color: black
+}
+
+#menu {
+    float: left;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+#menu :hover {
+    cursor: pointer;
+}
+
+#navbar {
+    margin: 0px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    opacity: 0;
+    height: 30px;
+}
+
+.navBarAnimShow {
+    animation: navBarExtend 0.2s ease-out forwards;
+}
+.navBarAnimHide {
+    animation: navBarHide 0.2s ease-out forwards;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*border: solid 5px red;*/
+    list-style: none;
+    width: 500px;
+}
+
+@keyframes navBarExtend {
+    from { width: 0px; opacity: 0; margin-left: 30px}
+    to {width: 600px; opacity: 100;}
+}
+@keyframes navBarHide {
+    from { width: 600px; opacity: 100; margin-left: 30px;}
+    to {width: 0px;}
+}
+
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+#container {
+    /*border: solid 5px blue;*/
+    margin: auto;
+}
+
+.centerText {
+    text-align: center;
+}
+
+
+#mayor {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+   /* border: solid 10px rebeccapurple;*/
+}
+
+#perks {
+   /* border: solid 5px red;*/
+    margin-left: 30px;
+    text-align: center;
+}
+
+#mayorName {
+    margin-left: 30px;
+}
+
+#election {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#mayorBox {
+    border-radius: 2%;
+    height: 800px;
+    width: 200px;
+    transform: translateY(-1200px);
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+#prev_elec_button {
+    height: 50px;
+    width: 500px;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-left: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prev_elec_button a {
+    text-decoration: none;
+    color: black;
+}
+
+.glassBox {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes moveIn {
+    from {transform: translateY(-700px);}
+    to {transform: translateY(0);}
+}
